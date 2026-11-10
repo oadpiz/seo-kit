@@ -1,0 +1,13 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "noEmit": false,
+    "declaration": true,
+    "rootDir": "src",
+    "module": "CommonJS",
+    "moduleResolution": "bundler",
+    "verbatimModuleSyntax": false,
+    "outDir": "dist/cjs"
+  },
+  "exclude": ["src/**/*.test.ts", "src/test-utils.ts"]
+}

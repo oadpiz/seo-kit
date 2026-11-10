@@ -1,0 +1,50 @@
+{
+  "name": "@oadpiz/seo-kit",
+  "version": "0.1.0",
+  "description": "SEO/AIEO unified generators (llms.txt, robots.txt, sitemap.xml, JSON-LD, meta tags) shared across oadpiz projects. Framework-agnostic, zero runtime dependencies.",
+  "type": "module",
+  "private": true,
+  "sideEffects": false,
+  "main": "./dist/cjs/index.js",
+  "types": "./dist/esm/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/esm/index.d.ts",
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.esm.json && tsc -p tsconfig.cjs.json && echo '{\"type\":\"commonjs\"}' > dist/cjs/package.json",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "keywords": [
+    "seo",
+    "aieo",
+    "llms-txt",
+    "robots-txt",
+    "sitemap",
+    "json-ld",
+    "structured-data",
+    "meta-tags"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oadpiz/seo-kit.git"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "typescript": "^7.0.2",
+    "vitest": "^4.1.12"
+  }
+}
